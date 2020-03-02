@@ -17,27 +17,16 @@ class FuncoesMetodosMachineLearning(object):
 
     def get_treinamento_correlacao(self):
 
-        # carrega perfis para treinamento
-        treinamento = ['douglasmanso', 'justinianoadriano', 'gabrsmelo', 'santos_emilii', 'dvailson', 'any_nogueira',
-                       'ferferrairo', 'allanlac', 'bahgutierrez', 'alexandretito12m', 'reis_junior1', 'sooltonaki',
-                       'ygorfremo', 'junnyorbraga', 'martinonews', 'aalves_arthur', 'nemoooj', 'pqp_pedros',
-                       'bbcbrasil', 'gabrielassp', 'messo2301', 'paulofraga', 'duda_alho', 'felps11', 'yfsenna',
-                       'graphixodzn','ahickmann', 'lenildo.alves.nildo', 'pivo_tech', 'brksedu', '_machadinho',
-                       'luanacrzz', 'thaynarakhalil', 'mateuso_', 'eusouluccabueno', 'kevonymartins', 'rosecaldeira',
-                       'carlasilvaesp', 'batistaa_batista','rafaaagonz', 'caioaml', 'carolinelinsph', 'kalielpinheiro',
-                       'leoamorim00', 'gabimxrques', 'victoroliveira', 'leonardomsrfps', 'brunozzor', 'rachmuniz',
-                       'daicrisstina', 'pqpveroniica', 'marcoscastro', 'felipeevz', 'tonkiel', 'se.bastiao', 'bis_23',
-                       'fhcfer', 'etserbu', 'marianapascoalz', 'luscas', 'babigms_', 'humbertobergamini', 'nandosang',
-                       'jparaujos', 'tainaracamila', 'osnipaulo', 'roberto.filho.cbr', 'dougraz', 'the_nicks7',
-                       '_anacardosos', 'zezelune', 'lwithp', 'guilhermefalcaopelegrino', 'renan.siqueira_93',
-                       'ericat_lol', 'bpenilhas', 'nathalythaly', 'oledobrasil', 'marcoantonio_tk', 'silvagm1',
-                       'diegosoarxs', 'joaoedu.mendes', 'anny.poly', 'iurymneves', 'said_leonardo', 'guiilhermecota',
-                       'paulinhoalfaro', 'matheusfesteves', 'tiagostocco', 'bruna.m.o', 'guilhermeevo', 'isahcoutto',
-                       'manumontezano', 'wagner_gurutech', 'marcal_mateus_fotografo', 'mucutinho', 'this_1984',
-                       'arinoert', 'chicobarney', 'showdavida', 'gustavopetro', '_toral', 'babimsss', 'caco.bapt',
-                       'pedro.baesso', 'nereuzin14', 'instadalarissa', 'reisjhr', '_fernandop', 'prazertom',
-                       'camposconti', 'leticinios', 'guliguori', 'pityfi', 'f.morroni', 'samimartinss',
-                       'renatamellzinha', 'petrusribeiro', 'mulier_niger', 'cadamuroana']
+        with open('treinamento.txt', 'r') as t:
+            arquivo = t.read()
+
+        dados = arquivo.split(',')
+
+        treinamento = []
+        for d in dados:
+            d = d.replace("\n", "")
+            d = d.strip()
+            treinamento.append(d)
 
         i = 0
         x = []
@@ -72,15 +61,16 @@ class FuncoesMetodosMachineLearning(object):
 
     def get_teste_correlacao(self):
 
-        #carrega perfis de teste
-        teste = ['baebuter', 'cauemoura', 'fourlan_nogueira', 'gabriellyluna_', 'guifcamargo', 'guivissotto',
-                 'igorreale3', 'karolteixeiraj', 'luquinha.jpg', 'mateusix', 'pedro_hre', 'pedrohrqq_', 'rafinhabastos',
-                 'rikkikitsune', 'rodpocket', 'thamsfigueiredo', 'thayssarepoles', 'tklissa', 'malkkav', 'latino_bigode',
-                 'lucasrohan', 'alanzoka', 'beladmenezes', 'berriel', 'carolvistro', 'civort', 'cleytu', 'fla_eikani',
-                 'wagner.linhares', 'vitustanguini', 'arielsis', '_amorimrenan_', 'guigustoo', 'pedroamericolopes',
-                 'cristaosecreto.ofc', 'rosangelagrimadi', 'llucca97', 'milaxxm', 'vitorxcx', 'potyguarabardo',
-                 'comicxwarrior', 'catherine_almeidaf','palomacar74', 'nathaanf', 'leandrommcosta', 'amandinha.lr',
-                 'kailanyasm', 'imendesfoto_', 'joaomourav', 'brunolima.0']
+        with open('teste.txt', 'r') as t:
+            arquivo = t.read()
+
+        dados = arquivo.split(',')
+
+        teste = []
+        for d in dados:
+            d = d.replace("\n", "")
+            d = d.strip()
+            teste.append(d)
 
         j = 0
         xt = []
